@@ -15,16 +15,16 @@ import clientNVM from "@assets/image_1770585025747.png";
 import clientFlowtech from "@assets/image_1770585071033.png";
 import clientWaterWipes from "@assets/image_1770585169911.png";
 import clientSecureConstruction from "@assets/logo_1770585539469.png";
-import projectSteel1 from "@assets/images/project-steel-1.jpeg";
-import projectSteel2 from "@assets/images/project-steel-2.jpeg";
-import projectSteel3 from "@assets/images/project-steel-3.jpeg";
-import projectSteel4 from "@assets/images/project-steel-4.jpeg";
-import projectSteel5 from "@assets/images/project-steel-5.jpeg";
-import projectSteel6 from "@assets/images/project-steel-6.jpeg";
-import projectSteel7 from "@assets/images/project-steel-7.jpeg";
-import workshopSteel1 from "@assets/images/workshop-steel-1.jpeg";
-import workshopSteel2 from "@assets/images/workshop-steel-2.jpeg";
-import workshopSteel3 from "@assets/images/workshop-steel-3.jpeg";
+import projectSteel1 from "@/assets/images/project-steel-1.jpeg";
+import projectSteel2 from "@/assets/images/project-steel-2.jpeg";
+import projectSteel3 from "@/assets/images/project-steel-3.jpeg";
+import projectSteel4 from "@/assets/images/project-steel-4.jpeg";
+import projectSteel5 from "@/assets/images/project-steel-5.jpeg";
+import projectSteel6 from "@/assets/images/project-steel-6.jpeg";
+import projectSteel7 from "@/assets/images/project-steel-7.jpeg";
+import workshopSteel1 from "@/assets/images/workshop-steel-1.jpeg";
+import workshopSteel2 from "@/assets/images/workshop-steel-2.jpeg";
+import workshopSteel3 from "@/assets/images/workshop-steel-3.jpeg";
 
 export const projectData = [
   { src: projectSteel1, category: "Structural Steel", title: "Construction Project" },
