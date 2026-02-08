@@ -275,6 +275,24 @@ export default function Home() {
                         </a>
                       );
                     }
+                    // Multi Storage is the 5th logo (index 4)
+                    if (idx === 4) {
+                      return (
+                        <a 
+                          key={idx} 
+                          href="https://www.multistorage.ie/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-primary/50 transition-colors flex items-center justify-center h-20 group"
+                        >
+                          <img 
+                            src={client} 
+                            alt={`Client logo ${idx + 1}`} 
+                            className="max-h-12 w-auto opacity-90 group-hover:opacity-100 transition-opacity filter brightness-100"
+                          />
+                        </a>
+                      );
+                    }
                     // NVM is the 6th logo (index 5)
                     if (idx === 5) {
                       return (
