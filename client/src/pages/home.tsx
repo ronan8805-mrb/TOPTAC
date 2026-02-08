@@ -201,54 +201,80 @@ export default function Home() {
       {/* ABOUT SPLIT */}
       <section id="about" className="py-24 bg-secondary/20 relative clip-diagonal">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="relative sticky top-24">
               <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-50" />
               <img 
                 src={images.weldingAction} 
                 alt="Welder at work" 
-                className="relative rounded-lg shadow-2xl border border-white/10 w-full object-cover aspect-[4/3]"
+                className="relative rounded-lg shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]"
               />
-              <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg border border-white/10 shadow-xl max-w-xs hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg border border-white/10 shadow-xl max-w-xs hidden md:block z-10">
                 <p className="text-primary font-display text-4xl font-bold mb-1">100+</p>
                 <p className="text-muted-foreground text-sm uppercase tracking-wider font-semibold">Years Combined Experience</p>
               </div>
             </div>
             
-            <div className="space-y-6">
-              <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase">Who We Are</h2>
-              <h3 className="text-4xl md:text-5xl font-display text-white leading-tight">
-                Quality You Can Trust.<br/>
-                Service You Can Rely On.
-              </h3>
-              <p className="text-gray-400 leading-relaxed text-lg">
-                Toptac Welding is a CE certified company, accredited to EN 1090 for structural steel up to Execution Class 2. 
-                Based in a 10,000 sq ft workshop in Greenhills, Drogheda, we have grown from a small independent business 
-                to a well-established limited company capable of handling large-scale commercial contracts.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-primary" />
-                  <p className="text-sm text-gray-300">10,000 sq ft Workshop</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-primary" />
-                  <p className="text-sm text-gray-300">Nationwide Service</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-primary" />
-                  <p className="text-sm text-gray-300">Full QA & Documentation</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 w-1.5 h-1.5 rounded-full bg-primary" />
-                  <p className="text-sm text-gray-300">Design to Installation</p>
-                </div>
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">Who We Are</h2>
+                <h3 className="text-4xl md:text-5xl font-display text-white leading-tight mb-4">
+                  Data Centre Steel<br/>
+                  Fabrication Partner
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  Toptac Welding is a CE certified steel fabrication company based in Drogheda, Co. Louth, 
+                  specialising in secondary and MEP steelwork for mission-critical environments, including data centres.
+                </p>
               </div>
 
-              <Button variant="link" className="text-white p-0 h-auto hover:text-primary group">
-                Learn more about our certification <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <div className="grid grid-cols-1 gap-6">
+                <div className="bg-card/50 p-6 rounded-lg border border-white/5">
+                  <h4 className="text-white font-heading font-bold text-lg mb-3 flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" /> What We Deliver
+                  </h4>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-400">
+                    <li>• Secondary / MEP steel packages</li>
+                    <li>• Cable tray support frames</li>
+                    <li>• Platforms, access steel, stairs & handrails</li>
+                    <li>• Skids, plinths and plant bases</li>
+                    <li>• Pipe racks and pipe support systems</li>
+                    <li>• Modular, install-ready assemblies</li>
+                  </ul>
+                </div>
+
+                <div className="bg-card/50 p-6 rounded-lg border border-white/5">
+                  <h4 className="text-white font-heading font-bold text-lg mb-3 flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" /> Facilities & Capability
+                  </h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    Operating from a 10,000 sq ft fabrication facility in Drogheda, 1 km from the port, 
+                    we are equipped with CNC plasma cutting, press braking, welding, drilling, and finishing capability. 
+                    Our location supports efficient logistics for Irish, UK, and European data centre programmes.
+                  </p>
+                </div>
+
+                <div className="bg-card/50 p-6 rounded-lg border border-white/5">
+                  <h4 className="text-white font-heading font-bold text-lg mb-3 flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" /> How We Work
+                  </h4>
+                  <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                    We operate as a single accountable fabrication partner. All steelwork is produced under 
+                    controlled procedures with full traceability, CE marking, and QA documentation.
+                  </p>
+                  <div className="flex flex-col gap-2 text-sm font-semibold text-white/90">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={14} className="text-primary" /> Programme Certainty
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={14} className="text-primary" /> Clear Communication
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={14} className="text-primary" /> Predictable Delivery
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
