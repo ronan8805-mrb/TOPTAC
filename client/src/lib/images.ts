@@ -32,6 +32,14 @@ import stairs5 from "@/assets/images/projects/stairs/stairs-5.jpeg";
 import stairs6 from "@/assets/images/projects/stairs/stairs-6.jpeg";
 import stairs7 from "@/assets/images/projects/stairs/stairs-7.jpeg";
 import stairs8 from "@/assets/images/projects/stairs/stairs-8.jpeg";
+import channel1 from "@/assets/images/projects/channel/channel-1.jpeg";
+import channel2 from "@/assets/images/projects/channel/channel-2.jpeg";
+import channel3 from "@/assets/images/projects/channel/channel-3.jpeg";
+import channel4 from "@/assets/images/projects/channel/channel-4.jpeg";
+import channel5 from "@/assets/images/projects/channel/channel-5.jpeg";
+import channel6 from "@/assets/images/projects/channel/channel-6.jpeg";
+import channel7 from "@/assets/images/projects/channel/channel-7.jpeg";
+import channel8 from "@/assets/images/projects/channel/channel-8.jpeg";
 
 export const projects = [
   {
@@ -79,6 +87,23 @@ export const projects = [
       stairs6,
       stairs7,
       stairs8
+    ]
+  },
+  {
+    id: "stainless-channel",
+    title: "U-Shaped Stainless Steel Channel",
+    category: "Stainless Steel Fabrication",
+    description: "Custom designed and fabricated U-shaped stainless steel channel system, manufactured to precise specifications.",
+    coverImage: channel1,
+    images: [
+      channel1,
+      channel2,
+      channel3,
+      channel4,
+      channel5,
+      channel6,
+      channel7,
+      channel8
     ]
   }
 ];
