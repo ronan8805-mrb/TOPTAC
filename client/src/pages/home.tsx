@@ -202,20 +202,22 @@ export default function Home() {
       <section id="about" className="py-24 bg-secondary/20 relative">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative sticky top-24">
-              <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-50" />
-              <img 
-                src={images.weldingAction} 
-                alt="Welder at work" 
-                className="relative rounded-lg shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg border border-white/10 shadow-xl max-w-xs hidden md:block z-10">
-                <p className="text-primary font-display text-4xl font-bold mb-1">100+</p>
-                <p className="text-muted-foreground text-sm uppercase tracking-wider font-semibold">Years Combined Experience</p>
+            <div className="sticky top-24">
+              <div className="relative mb-16">
+                <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-50" />
+                <img 
+                  src={images.weldingAction} 
+                  alt="Welder at work" 
+                  className="relative rounded-lg shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg border border-white/10 shadow-xl max-w-xs hidden md:block z-10">
+                  <p className="text-primary font-display text-4xl font-bold mb-1">100+</p>
+                  <p className="text-muted-foreground text-sm uppercase tracking-wider font-semibold">Years Combined Experience</p>
+                </div>
               </div>
 
               {/* Client Logos Section */}
-              <div className="mt-16 pt-8 border-t border-white/5">
+              <div className="pt-8 border-t border-white/5">
                 <p className="text-muted-foreground text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center lg:text-left">Trusted Partners</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
                   {images.clients.map((client, idx) => (
