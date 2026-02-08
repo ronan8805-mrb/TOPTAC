@@ -213,6 +213,22 @@ export default function Home() {
                 <p className="text-primary font-display text-4xl font-bold mb-1">100+</p>
                 <p className="text-muted-foreground text-sm uppercase tracking-wider font-semibold">Years Combined Experience</p>
               </div>
+
+              {/* Client Logos Section */}
+              <div className="mt-16 pt-8 border-t border-white/5">
+                <p className="text-muted-foreground text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center lg:text-left">Trusted Partners</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
+                  {images.clients.map((client, idx) => (
+                     <div key={idx} className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-colors flex items-center justify-center h-20">
+                       <img 
+                         src={client} 
+                         alt={`Client logo ${idx + 1}`} 
+                         className="max-h-12 w-auto opacity-80 hover:opacity-100 transition-opacity filter brightness-100 grayscale hover:grayscale-0"
+                       />
+                     </div>
+                  ))}
+                </div>
+              </div>
             </div>
             
             <div className="space-y-8">

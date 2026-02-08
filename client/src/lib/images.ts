@@ -6,6 +6,7 @@ import project3 from "@assets/structural-steel_1770558592986.jpg";
 import weldingAction from "@assets/wielding_on_site_1770558592986.png";
 import cert from "@assets/image_1770559174355.png";
 import certReport from "@assets/image_1770559160072.png";
+import clientNaturesBest from "@assets/2061c106-6bed-4d11-8812-ceb236152885_removalai_preview_1770584662880.png";
 
 export const images = {
   logo,
@@ -13,5 +14,6 @@ export const images = {
   projects: [project1, project2, project3],
   weldingAction,
   cert,
-  certReport
+  certReport,
+  clients: [clientNaturesBest]
 };
