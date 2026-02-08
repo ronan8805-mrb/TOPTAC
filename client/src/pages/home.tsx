@@ -220,7 +220,26 @@ export default function Home() {
               <div className="pt-8 border-t border-white/5">
                 <p className="text-muted-foreground text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center lg:text-left">Trusted Partners</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
-                  {images.clients.map((client, idx) => (
+                  {images.clients.map((client, idx) => {
+                    // Kavco Group is the 3rd logo (index 2)
+                    if (idx === 2) {
+                      return (
+                        <a 
+                          key={idx} 
+                          href="https://kavco.ie/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-primary/50 transition-colors flex items-center justify-center h-20 group"
+                        >
+                          <img 
+                            src={client} 
+                            alt={`Client logo ${idx + 1}`} 
+                            className="max-h-12 w-auto opacity-90 group-hover:opacity-100 transition-opacity filter brightness-100"
+                          />
+                        </a>
+                      );
+                    }
+                    return (
                      <div key={idx} className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-colors flex items-center justify-center h-20">
                        <img 
                          src={client} 
@@ -228,7 +247,8 @@ export default function Home() {
                          className="max-h-12 w-auto opacity-90 hover:opacity-100 transition-opacity filter brightness-100"
                        />
                      </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
