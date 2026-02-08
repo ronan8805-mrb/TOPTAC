@@ -221,6 +221,24 @@ export default function Home() {
                 <p className="text-muted-foreground text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center lg:text-left">Trusted Partners</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
                   {images.clients.map((client, idx) => {
+                    // Nature's Best is the 1st logo (index 0)
+                    if (idx === 0) {
+                      return (
+                        <a 
+                          key={idx} 
+                          href="https://www.naturesbest.ie/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-primary/50 transition-colors flex items-center justify-center h-20 group"
+                        >
+                          <img 
+                            src={client} 
+                            alt={`Client logo ${idx + 1}`} 
+                            className="max-h-12 w-auto opacity-90 group-hover:opacity-100 transition-opacity filter brightness-100"
+                          />
+                        </a>
+                      );
+                    }
                     // Kavco Group is the 3rd logo (index 2)
                     if (idx === 2) {
                       return (
