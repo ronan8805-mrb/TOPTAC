@@ -219,8 +219,8 @@ export default function Home() {
               <div>
                 <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">Who We Are</h2>
                 <h3 className="text-4xl md:text-5xl font-display text-white leading-tight mb-4">
-                  Data Centre Steel<br/>
-                  Fabrication Partner
+                  Quality You Can Trust.<br/>
+                  Service You Can Rely On.
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
                   Toptac Welding is a CE certified steel fabrication company based in Drogheda, Co. Louth, 
