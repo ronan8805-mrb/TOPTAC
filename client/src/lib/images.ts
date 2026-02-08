@@ -24,6 +24,12 @@ import workshopSteel2 from "@/assets/images/projects/workshop/workshop-steel-2.j
 import workshopSteel3 from "@/assets/images/projects/workshop/workshop-steel-3.jpeg";
 import workshopSteel4 from "@/assets/images/projects/workshop/workshop-steel-4.jpeg";
 import workshopSteel5 from "@/assets/images/projects/workshop/workshop-steel-5.jpeg";
+import stairs1 from "@/assets/images/projects/stairs/stairs-1.jpeg";
+import stairs2 from "@/assets/images/projects/stairs/stairs-2.jpeg";
+import stairs3 from "@/assets/images/projects/stairs/stairs-3.jpeg";
+import stairs4 from "@/assets/images/projects/stairs/stairs-4.jpeg";
+import stairs5 from "@/assets/images/projects/stairs/stairs-5.jpeg";
+import stairs6 from "@/assets/images/projects/stairs/stairs-6.jpeg";
 
 export const projects = [
   {
@@ -54,6 +60,21 @@ export const projects = [
       workshopSteel2,
       workshopSteel4,
       workshopSteel5
+    ]
+  },
+  {
+    id: "staircase-fabrication",
+    title: "Bespoke Staircase Fabrication",
+    category: "Metal Fabrication",
+    description: "Custom-designed steel staircase fabrication featuring precision engineering and high-quality finish for commercial installation.",
+    coverImage: stairs1,
+    images: [
+      stairs1,
+      stairs2,
+      stairs3,
+      stairs4,
+      stairs5,
+      stairs6
     ]
   }
 ];

@@ -535,7 +535,7 @@ export default function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {projects.map((project, idx) => (
               <Link key={idx} href="/projects">
