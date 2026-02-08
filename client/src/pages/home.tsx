@@ -443,7 +443,7 @@ export default function Home() {
                     );
                   })}
                 </div>
-              </div>
+              </motion.div>
             </div>
             
             <div className="space-y-8">
