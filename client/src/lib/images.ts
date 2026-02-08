@@ -9,6 +9,7 @@ import certReport from "@assets/image_1770559160072.png";
 import clientNaturesBest from "@assets/2061c106-6bed-4d11-8812-ceb236152885_removalai_preview_1770584662880.png";
 import clientIndaver from "@assets/7f4de105-a0a1-4566-9b35-897c21b5fadd_removalai_preview_1770584764603.png";
 import clientKavco from "@assets/Screenshot_2026-02-08_205455_1770584844363.png";
+import clientWaterWipes from "@assets/Screenshot_2026-02-08_205919_1770584868785.png";
 
 export const images = {
   logo,
@@ -17,5 +18,5 @@ export const images = {
   weldingAction,
   cert,
   certReport,
-  clients: [clientNaturesBest, clientIndaver, clientKavco]
+  clients: [clientNaturesBest, clientIndaver, clientKavco, clientWaterWipes]
 };
