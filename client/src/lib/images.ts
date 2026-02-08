@@ -22,19 +22,27 @@ import projectSteel4 from "@assets/images/project-steel-4.jpeg";
 import projectSteel5 from "@assets/images/project-steel-5.jpeg";
 import projectSteel6 from "@assets/images/project-steel-6.jpeg";
 import projectSteel7 from "@assets/images/project-steel-7.jpeg";
+import workshopSteel1 from "@assets/images/workshop-steel-1.jpeg";
+import workshopSteel2 from "@assets/images/workshop-steel-2.jpeg";
+import workshopSteel3 from "@assets/images/workshop-steel-3.jpeg";
+
+export const projectData = [
+  { src: projectSteel1, category: "Structural Steel", title: "Construction Project" },
+  { src: projectSteel2, category: "Structural Steel", title: "Construction Project" },
+  { src: projectSteel3, category: "Structural Steel", title: "Construction Project" },
+  { src: projectSteel4, category: "Structural Steel", title: "Construction Project" },
+  { src: projectSteel5, category: "Structural Steel", title: "Construction Project" },
+  { src: projectSteel6, category: "Structural Steel", title: "Construction Project" },
+  { src: projectSteel7, category: "Structural Steel", title: "Construction Project" },
+  { src: workshopSteel1, category: "In-House Fabrication", title: "Workshop Processing" },
+  { src: workshopSteel2, category: "In-House Fabrication", title: "Workshop Processing" },
+  { src: workshopSteel3, category: "In-House Fabrication", title: "Workshop Processing" },
+];
 
 export const images = {
   logo,
   heroBg,
-  projects: [
-    projectSteel1, 
-    projectSteel2, 
-    projectSteel3, 
-    projectSteel4, 
-    projectSteel5, 
-    projectSteel6, 
-    projectSteel7
-  ],
+  projects: projectData,
   weldingAction,
   cert,
   certReport,

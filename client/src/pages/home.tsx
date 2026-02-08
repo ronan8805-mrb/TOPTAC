@@ -534,17 +534,17 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {images.projects.map((img, idx) => (
+            {images.projects.map((project, idx) => (
               <motion.div variants={fadeInUp} key={idx} className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/3] cursor-pointer">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
                 <img 
-                  src={img} 
-                  alt={`Project ${idx + 1}`} 
+                  src={project.src} 
+                  alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/90 to-transparent">
-                  <p className="text-primary text-xs font-bold uppercase tracking-wider mb-1">Structural Steel</p>
-                  <h4 className="text-white font-display text-xl font-bold">Construction Project</h4>
+                  <p className="text-primary text-xs font-bold uppercase tracking-wider mb-1">{project.category}</p>
+                  <h4 className="text-white font-display text-xl font-bold">{project.title}</h4>
                 </div>
               </motion.div>
             ))}
