@@ -102,10 +102,17 @@ export default function Home() {
             </motion.p>
             
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-red-700 text-white font-heading uppercase tracking-wide text-lg h-14 px-8">
-                View Projects
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-heading uppercase tracking-wide text-lg h-14 px-8">
+              <Link href="/projects">
+                <Button size="lg" className="bg-primary hover:bg-red-700 text-white font-heading uppercase tracking-wide text-lg h-14 px-8 w-full sm:w-auto">
+                  View Projects
+                </Button>
+              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/20 hover:bg-white/10 text-white font-heading uppercase tracking-wide text-lg h-14 px-8 w-full sm:w-auto"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Contact Us
               </Button>
             </motion.div>
