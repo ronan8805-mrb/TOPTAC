@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SPLIT */}
-      <section id="about" className="py-24 bg-secondary/20 relative clip-diagonal">
+      <section id="about" className="py-24 bg-secondary/20 relative">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="relative sticky top-24">
