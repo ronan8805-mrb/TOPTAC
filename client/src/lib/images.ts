@@ -13,6 +13,7 @@ import clientWaterWipes from "@assets/Screenshot_2026-02-08_205919_1770584868785
 import clientInstaspace from "@assets/Screenshot_2026-02-08_210027_1770584915759.png";
 import clientMultiStorage from "@assets/Screenshot_2026-02-08_205758-removebg-preview_1770584982366.png";
 import clientNVM from "@assets/image_1770585025747.png";
+import clientFlowtech from "@assets/image_1770585071033.png";
 
 export const images = {
   logo,
@@ -21,5 +22,5 @@ export const images = {
   weldingAction,
   cert,
   certReport,
-  clients: [clientNaturesBest, clientIndaver, clientKavco, clientWaterWipes, clientInstaspace, clientMultiStorage, clientNVM]
+  clients: [clientNaturesBest, clientIndaver, clientKavco, clientWaterWipes, clientInstaspace, clientMultiStorage, clientNVM, clientFlowtech]
 };
