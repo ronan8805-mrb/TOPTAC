@@ -30,6 +30,8 @@ import stairs3 from "@/assets/images/projects/stairs/stairs-3.jpeg";
 import stairs4 from "@/assets/images/projects/stairs/stairs-4.jpeg";
 import stairs5 from "@/assets/images/projects/stairs/stairs-5.jpeg";
 import stairs6 from "@/assets/images/projects/stairs/stairs-6.jpeg";
+import stairs7 from "@/assets/images/projects/stairs/stairs-7.jpeg";
+import stairs8 from "@/assets/images/projects/stairs/stairs-8.jpeg";
 
 export const projects = [
   {
@@ -74,7 +76,9 @@ export const projects = [
       stairs3,
       stairs4,
       stairs5,
-      stairs6
+      stairs6,
+      stairs7,
+      stairs8
     ]
   }
 ];
