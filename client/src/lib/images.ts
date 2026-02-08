@@ -14,7 +14,7 @@ import clientMultiStorage from "@assets/Screenshot_2026-02-08_205758-removebg-pr
 import clientNVM from "@assets/image_1770585025747.png";
 import clientFlowtech from "@assets/image_1770585071033.png";
 import clientWaterWipes from "@assets/image_1770585169911.png";
-import clientSecureConstruction from "@assets/image_1770585298551.png";
+import clientSecureConstruction from "@assets/logo_1770585539469.png";
 
 export const images = {
   logo,
