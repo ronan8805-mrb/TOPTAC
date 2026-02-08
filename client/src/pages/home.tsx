@@ -225,7 +225,7 @@ export default function Home() {
                        <img 
                          src={client} 
                          alt={`Client logo ${idx + 1}`} 
-                         className="max-h-12 w-auto opacity-80 hover:opacity-100 transition-opacity filter brightness-100 grayscale hover:grayscale-0"
+                         className="max-h-12 w-auto opacity-90 hover:opacity-100 transition-opacity filter brightness-100"
                        />
                      </div>
                   ))}
