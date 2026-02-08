@@ -543,8 +543,8 @@ export default function Home() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/90 to-transparent">
-                  <p className="text-primary text-xs font-bold uppercase tracking-wider mb-1">Structural</p>
-                  <h4 className="text-white font-display text-xl font-bold">Residential Development</h4>
+                  <p className="text-primary text-xs font-bold uppercase tracking-wider mb-1">Structural Steel</p>
+                  <h4 className="text-white font-display text-xl font-bold">Construction Project</h4>
                 </div>
               </motion.div>
             ))}

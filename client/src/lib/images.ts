@@ -15,11 +15,26 @@ import clientNVM from "@assets/image_1770585025747.png";
 import clientFlowtech from "@assets/image_1770585071033.png";
 import clientWaterWipes from "@assets/image_1770585169911.png";
 import clientSecureConstruction from "@assets/logo_1770585539469.png";
+import projectSteel1 from "@assets/images/project-steel-1.jpeg";
+import projectSteel2 from "@assets/images/project-steel-2.jpeg";
+import projectSteel3 from "@assets/images/project-steel-3.jpeg";
+import projectSteel4 from "@assets/images/project-steel-4.jpeg";
+import projectSteel5 from "@assets/images/project-steel-5.jpeg";
+import projectSteel6 from "@assets/images/project-steel-6.jpeg";
+import projectSteel7 from "@assets/images/project-steel-7.jpeg";
 
 export const images = {
   logo,
   heroBg,
-  projects: [project1, project2, project3],
+  projects: [
+    projectSteel1, 
+    projectSteel2, 
+    projectSteel3, 
+    projectSteel4, 
+    projectSteel5, 
+    projectSteel6, 
+    projectSteel7
+  ],
   weldingAction,
   cert,
   certReport,
