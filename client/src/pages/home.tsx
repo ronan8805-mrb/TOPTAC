@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { images } from "@/lib/images";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Factory, Hammer, ShieldCheck, Truck } from "lucide-react";
+import { ArrowRight, CheckCircle2, Factory, Hammer, ShieldCheck, Truck, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* CERTIFICATION STRIP */}
-      <section className="bg-secondary/30 border-y border-white/5 py-8 relative overflow-hidden">
+      <section id="certifications" className="bg-secondary/30 border-y border-white/5 py-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
            <div className="flex items-center gap-4">
@@ -113,9 +113,64 @@ export default function Home() {
            </div>
         </div>
       </section>
+      
+      {/* CERTIFICATION DETAILS */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-4">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+             <div className="order-2 md:order-1 relative">
+                <div className="relative z-10 grid grid-cols-2 gap-4">
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="relative group"
+                  >
+                    <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <img src={images.cert} alt="CE Certificate" className="w-full rounded-lg border border-white/10 shadow-2xl relative z-10 transition-transform group-hover:scale-105" />
+                  </motion.div>
+                  <motion.div 
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="relative group mt-12"
+                  >
+                     <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                     <img src={images.certReport} alt="Certification Report" className="w-full rounded-lg border border-white/10 shadow-2xl relative z-10 transition-transform group-hover:scale-105" />
+                  </motion.div>
+                </div>
+             </div>
+             <div className="order-1 md:order-2">
+               <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">Accreditation</h2>
+               <h3 className="text-4xl md:text-5xl font-display text-white mb-6">Certified Excellence</h3>
+               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                 Toptac Welding & Fabrication Ltd holds the prestigious <span className="text-white font-bold">EN 1090-1 + A1:2012</span> certification 
+                 for structural steel components up to <span className="text-white font-bold">Execution Class 2 (EXC2)</span>.
+               </p>
+               <ul className="space-y-4 mb-8">
+                 <li className="flex items-start gap-3 text-gray-300">
+                   <FileText className="text-primary shrink-0 mt-1" size={20} />
+                   <span>Certified Factory Production Control (FPC) System 2+</span>
+                 </li>
+                 <li className="flex items-start gap-3 text-gray-300">
+                   <FileText className="text-primary shrink-0 mt-1" size={20} />
+                   <span>Compliance with European Construction Products Regulation (CPR)</span>
+                 </li>
+                 <li className="flex items-start gap-3 text-gray-300">
+                   <FileText className="text-primary shrink-0 mt-1" size={20} />
+                   <span>Declaration Methods 1, 2, 3a, and 3b</span>
+                 </li>
+               </ul>
+               <Button variant="outline" className="border-white/20 hover:bg-white/10 text-white">
+                 Download Certificates
+               </Button>
+             </div>
+           </div>
+        </div>
+      </section>
 
       {/* SERVICES GRID */}
-      <section id="services" className="py-24 bg-background relative">
+      <section id="services" className="py-24 bg-secondary/10 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 max-w-2xl mx-auto">
             <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">What We Do</h2>

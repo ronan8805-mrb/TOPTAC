@@ -4,12 +4,14 @@ import project1 from "@assets/2_structural-steel_1770558592986.jpg";
 import project2 from "@assets/PROJECTS_1770558592986.jpg";
 import project3 from "@assets/structural-steel_1770558592986.jpg";
 import weldingAction from "@assets/wielding_on_site_1770558592986.png";
-import cert from "@assets/CE_Certification_–_EN_1090_1770558592986.jpeg";
+import cert from "@assets/image_1770559174355.png";
+import certReport from "@assets/image_1770559160072.png";
 
 export const images = {
   logo,
   heroBg,
   projects: [project1, project2, project3],
   weldingAction,
-  cert
+  cert,
+  certReport
 };
