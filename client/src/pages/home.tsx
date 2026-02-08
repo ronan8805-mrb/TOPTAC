@@ -213,18 +213,6 @@ export default function Home() {
                 <p className="text-primary font-display text-4xl font-bold mb-1">100+</p>
                 <p className="text-muted-foreground text-sm uppercase tracking-wider font-semibold">Years Combined Experience</p>
               </div>
-
-              {/* Client Logos Section */}
-              <div className="mt-16 pt-8 border-t border-white/5">
-                <p className="text-muted-foreground text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center lg:text-left">Trusted Partners</p>
-                <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-colors">
-                  <img 
-                    src={images.clientLogos} 
-                    alt="Our Clients: Kavco Group, Multi Storage, Indaver, Nature's Best, Water Wipes, Instaspace, NVM, Flowtech" 
-                    className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity filter contrast-125"
-                  />
-                </div>
-              </div>
             </div>
             
             <div className="space-y-8">
