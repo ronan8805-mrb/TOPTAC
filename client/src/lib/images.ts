@@ -1,5 +1,5 @@
 import logo from "@assets/Screenshot_2026-01-10_201140-removebg-preview_1770558621224.png";
-import heroBg from "@assets/1_structural-steel_1770558592986.jpg";
+import heroBg from "@assets/Toptac_Brochure_background_pic_1770559029419.jpg";
 import project1 from "@assets/2_structural-steel_1770558592986.jpg";
 import project2 from "@assets/PROJECTS_1770558592986.jpg";
 import project3 from "@assets/structural-steel_1770558592986.jpg";
