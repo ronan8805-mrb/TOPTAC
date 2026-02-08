@@ -239,6 +239,24 @@ export default function Home() {
                         </a>
                       );
                     }
+                    // Instaspace is the 4th logo (index 3)
+                    if (idx === 3) {
+                      return (
+                        <a 
+                          key={idx} 
+                          href="https://www.instaspace.ie/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-primary/50 transition-colors flex items-center justify-center h-20 group"
+                        >
+                          <img 
+                            src={client} 
+                            alt={`Client logo ${idx + 1}`} 
+                            className="max-h-12 w-auto opacity-90 group-hover:opacity-100 transition-opacity filter brightness-100"
+                          />
+                        </a>
+                      );
+                    }
                     return (
                      <div key={idx} className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-colors flex items-center justify-center h-20">
                        <img 
