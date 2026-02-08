@@ -22,6 +22,8 @@ import projectSteel7 from "@/assets/images/projects/construction/project-steel-7
 import workshopSteel1 from "@/assets/images/projects/workshop/workshop-steel-1.jpeg";
 import workshopSteel2 from "@/assets/images/projects/workshop/workshop-steel-2.jpeg";
 import workshopSteel3 from "@/assets/images/projects/workshop/workshop-steel-3.jpeg";
+import workshopSteel4 from "@/assets/images/projects/workshop/workshop-steel-4.jpeg";
+import workshopSteel5 from "@/assets/images/projects/workshop/workshop-steel-5.jpeg";
 
 export const projects = [
   {
@@ -49,7 +51,9 @@ export const projects = [
     images: [
       workshopSteel3,
       workshopSteel1,
-      workshopSteel2
+      workshopSteel2,
+      workshopSteel4,
+      workshopSteel5
     ]
   }
 ];
