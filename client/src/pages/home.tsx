@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { images } from "@/lib/images";
+import { images, projects } from "@/lib/images";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, CheckCircle2, Factory, Hammer, ShieldCheck, Truck, FileText } from "lucide-react";
@@ -535,21 +535,27 @@ export default function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {images.projects.slice(0, 6).map((project, idx) => (
-              <motion.div variants={fadeInUp} key={idx} className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/3] cursor-pointer">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
-                <img 
-                  src={project.src} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/90 to-transparent">
-                  <p className="text-primary text-xs font-bold uppercase tracking-wider mb-1">{project.category}</p>
-                  <h4 className="text-white font-display text-xl font-bold">{project.title}</h4>
-                </div>
-              </motion.div>
+            {projects.map((project, idx) => (
+              <Link key={idx} href="/projects">
+                <motion.div variants={fadeInUp} className="group relative overflow-hidden rounded-lg aspect-[16/10] cursor-pointer border border-white/5">
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
+                  <img 
+                    src={project.coverImage} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-2 group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/90 to-transparent">
+                    <p className="text-primary text-xs font-bold uppercase tracking-wider mb-2">{project.category}</p>
+                    <h4 className="text-white font-display text-2xl font-bold mb-2">{project.title}</h4>
+                    <p className="text-white/70 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">{project.description}</p>
+                    <div className="flex items-center gap-2 mt-4 text-white text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity delay-200">
+                      View Gallery <ArrowRight size={14} className="text-primary" />
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
            <Link href="/projects">
