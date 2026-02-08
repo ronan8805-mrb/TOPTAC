@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { images } from "@/lib/images";
@@ -524,7 +525,9 @@ export default function Home() {
               <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">Our Work</h2>
               <h3 className="text-4xl md:text-5xl font-display text-white">Featured Projects</h3>
             </div>
-            <Button variant="outline" className="hidden md:flex">View All Projects</Button>
+            <Link href="/projects">
+              <Button variant="outline" className="hidden md:flex">View All Projects</Button>
+            </Link>
           </motion.div>
 
           <motion.div 
@@ -534,7 +537,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {images.projects.map((project, idx) => (
+            {images.projects.slice(0, 6).map((project, idx) => (
               <motion.div variants={fadeInUp} key={idx} className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/3] cursor-pointer">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
                 <img 
@@ -549,7 +552,9 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
-           <Button variant="outline" className="w-full mt-8 md:hidden">View All Projects</Button>
+           <Link href="/projects">
+             <Button variant="outline" className="w-full mt-8 md:hidden">View All Projects</Button>
+           </Link>
         </div>
       </section>
 

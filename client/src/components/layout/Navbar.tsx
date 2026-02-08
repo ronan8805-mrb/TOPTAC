@@ -16,10 +16,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/#about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -45,13 +45,13 @@ export function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className="font-heading uppercase tracking-wider text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+              className="font-heading uppercase tracking-wider text-sm font-semibold text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <Button variant="default" size="sm" className="bg-primary hover:bg-red-600 text-white font-heading uppercase tracking-wide">
             Get a Quote
@@ -79,17 +79,20 @@ export function Navbar() {
           >
             <div className="flex flex-col p-6 gap-6">
               {navLinks.map((link, idx) => (
-                <motion.a
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+                <Link
                   key={link.name}
                   href={link.href}
-                  className="font-heading uppercase text-xl font-bold text-foreground/80 hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  {link.name}
-                </motion.a>
+                  <motion.span
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="font-heading uppercase text-xl font-bold text-foreground/80 hover:text-primary transition-colors block cursor-pointer"
+                  >
+                    {link.name}
+                  </motion.span>
+                </Link>
               ))}
               <motion.div 
                 initial={{ opacity: 0 }}
