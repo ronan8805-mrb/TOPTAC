@@ -71,30 +71,42 @@ export function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border"
+            initial={{ opacity: 0, height: 0, y: -20 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border absolute top-full left-0 right-0 shadow-2xl"
           >
-            <div className="flex flex-col p-4 gap-4">
-              {navLinks.map((link) => (
-                <a
+            <div className="flex flex-col p-6 gap-6">
+              {navLinks.map((link, idx) => (
+                <motion.a
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.1 }}
                   key={link.name}
                   href={link.href}
-                  className="font-heading uppercase text-lg text-foreground/80 hover:text-primary"
+                  className="font-heading uppercase text-xl font-bold text-foreground/80 hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </motion.a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                 <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                   <Phone size={16} /> 086 360 8811
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="flex flex-col gap-4 pt-6 border-t border-white/10"
+              >
+                 <div className="flex items-center gap-3 text-muted-foreground text-base">
+                   <Phone size={18} className="text-primary" /> 086 360 8811
                  </div>
-                 <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                   <Mail size={16} /> toptacwelding@outlook.ie
+                 <div className="flex items-center gap-3 text-muted-foreground text-base">
+                   <Mail size={18} className="text-primary" /> toptacwelding@outlook.ie
                  </div>
-              </div>
+                 <Button className="w-full mt-2 bg-primary text-white font-heading uppercase tracking-wide">
+                   Get a Quote
+                 </Button>
+              </motion.div>
             </div>
           </motion.div>
         )}

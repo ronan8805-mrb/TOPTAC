@@ -2,16 +2,34 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { images } from "@/lib/images";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, CheckCircle2, Factory, Hammer, ShieldCheck, Truck, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
+  const { scrollY } = useScroll();
+  const yBg = useTransform(scrollY, [0, 500], [0, 200]);
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
 
   const services = [
@@ -47,11 +65,11 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
-          <img 
+          <motion.img 
             src={images.heroBg} 
             alt="Structural Steel Construction" 
-            className="w-full h-full object-cover scale-105 animate-slow-zoom" 
-            style={{ animationDuration: '20s' }}
+            className="w-full h-full object-cover scale-105" 
+            style={{ y: yBg }}
           />
         </div>
 
@@ -172,29 +190,43 @@ export default function Home() {
       {/* SERVICES GRID */}
       <section id="services" className="py-24 bg-secondary/10 relative">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16 max-w-2xl mx-auto"
+          >
             <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">What We Do</h2>
             <h3 className="text-4xl md:text-5xl font-display text-white mb-4">Industrial Grade Solutions</h3>
             <p className="text-muted-foreground">Combining over 100 years of experience with state-of-the-art machinery to deliver bespoke fabrication needs.</p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {services.map((service, idx) => (
-              <Card key={idx} className="bg-card border-white/5 hover:border-primary/50 transition-colors group">
-                <CardContent className="p-8">
-                  <div className="mb-6 bg-secondary/50 w-16 h-16 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    {service.icon}
-                  </div>
-                  <h4 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {service.desc}
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div variants={fadeInUp} key={idx}>
+                <Card className="bg-card border-white/5 hover:border-primary/50 transition-colors group h-full">
+                  <CardContent className="p-8">
+                    <div className="mb-6 bg-secondary/50 w-16 h-16 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      {service.icon}
+                    </div>
+                    <h4 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.desc}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -203,21 +235,38 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="sticky top-24">
-              <div className="relative mb-16">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative mb-16"
+              >
                 <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-50" />
                 <img 
                   src={images.weldingAction} 
                   alt="Welder at work" 
                   className="relative rounded-lg shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg border border-white/10 shadow-xl max-w-xs hidden md:block z-10">
+                <motion.div 
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg border border-white/10 shadow-xl max-w-xs hidden md:block z-10"
+                >
                   <p className="text-primary font-display text-4xl font-bold mb-1">100+</p>
                   <p className="text-muted-foreground text-sm uppercase tracking-wider font-semibold">Years Combined Experience</p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
               {/* Client Logos Section */}
-              <div className="pt-8 border-t border-white/5">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="pt-8 border-t border-white/5"
+              >
                 <p className="text-muted-foreground text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center lg:text-left">Trusted Partners</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center">
                   {images.clients.map((client, idx) => {
@@ -465,17 +514,28 @@ export default function Home() {
       {/* PROJECTS GALLERY */}
       <section id="projects" className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"
+          >
             <div>
               <h2 className="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-2">Our Work</h2>
               <h3 className="text-4xl md:text-5xl font-display text-white">Featured Projects</h3>
             </div>
             <Button variant="outline" className="hidden md:flex">View All Projects</Button>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {images.projects.map((img, idx) => (
-              <div key={idx} className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/3] cursor-pointer">
+              <motion.div variants={fadeInUp} key={idx} className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/3] cursor-pointer">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
                 <img 
                   src={img} 
@@ -486,9 +546,9 @@ export default function Home() {
                   <p className="text-primary text-xs font-bold uppercase tracking-wider mb-1">Structural</p>
                   <h4 className="text-white font-display text-xl font-bold">Residential Development</h4>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
            <Button variant="outline" className="w-full mt-8 md:hidden">View All Projects</Button>
         </div>
       </section>
