@@ -36,6 +36,15 @@ async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
+  if (process.env.VERCEL) {
+    await viteBuild({
+      build: {
+        outDir: "dist",
+        emptyOutDir: true,
+      },
+    });
+    return;
+  }
   await viteBuild();
 
   console.log("building server...");
