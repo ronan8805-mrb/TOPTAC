@@ -40,6 +40,26 @@ import channel5 from "@/assets/images/projects/channel/channel-5.jpeg";
 import channel6 from "@/assets/images/projects/channel/channel-6.jpeg";
 import channel7 from "@/assets/images/projects/channel/channel-7.jpeg";
 import channel8 from "@/assets/images/projects/channel/channel-8.jpeg";
+import structural1 from "@/assets/images/projects/structural/structural-1.jpeg";
+import structural2 from "@/assets/images/projects/structural/structural-2.jpeg";
+import structural3 from "@/assets/images/projects/structural/structural-3.jpeg";
+import structural4 from "@/assets/images/projects/structural/structural-4.jpeg";
+import structural5 from "@/assets/images/projects/structural/structural-5.jpeg";
+import structural6 from "@/assets/images/projects/structural/structural-6.jpeg";
+import structural7 from "@/assets/images/projects/structural/structural-7.jpeg";
+import structural8 from "@/assets/images/projects/structural/structural-8.jpeg";
+import structural9 from "@/assets/images/projects/structural/structural-9.jpeg";
+import structural10 from "@/assets/images/projects/structural/structural-10.jpeg";
+import structural11 from "@/assets/images/projects/structural/structural-11.jpeg";
+import structural12 from "@/assets/images/projects/structural/structural-12.jpeg";
+import structural13 from "@/assets/images/projects/structural/structural-13.jpeg";
+import structural14 from "@/assets/images/projects/structural/structural-14.jpeg";
+import structural15 from "@/assets/images/projects/structural/structural-15.jpeg";
+import structural16 from "@/assets/images/projects/structural/structural-16.jpeg";
+import structural17 from "@/assets/images/projects/structural/structural-17.jpeg";
+import structural18 from "@/assets/images/projects/structural/structural-18.jpeg";
+import structural19 from "@/assets/images/projects/structural/structural-19.jpeg";
+import structural20 from "@/assets/images/projects/structural/structural-20.jpeg";
 
 export const projects = [
   {
@@ -104,6 +124,35 @@ export const projects = [
       channel6,
       channel7,
       channel8
+    ]
+  },
+  {
+    id: "structural-construction",
+    title: "Structural Steel Construction",
+    category: "Construction",
+    description: "Complete structural steel framework installation for residential and commercial developments, including heavy beam placement and on-site welding.",
+    coverImage: structural2,
+    images: [
+      structural2,
+      structural1,
+      structural3,
+      structural4,
+      structural5,
+      structural6,
+      structural7,
+      structural8,
+      structural9,
+      structural10,
+      structural11,
+      structural12,
+      structural13,
+      structural14,
+      structural15,
+      structural16,
+      structural17,
+      structural18,
+      structural19,
+      structural20
     ]
   }
 ];
